@@ -1,0 +1,28 @@
+ol.proj.proj4.register(proj4);
+//ol.proj.get("EPSG:32645").setExtent([630143.483652, 2505596.074396, 650883.643979, 2516122.146609]);
+var wms_layers = [];
+
+var format_Panihati_0 = new ol.format.GeoJSON();
+var features_Panihati_0 = format_Panihati_0.readFeatures(json_Panihati_0, 
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:32645'});
+var jsonSource_Panihati_0 = new ol.source.Vector({
+    attributions: ' ',
+});
+jsonSource_Panihati_0.addFeatures(features_Panihati_0);
+var lyr_Panihati_0 = new ol.layer.Vector({
+                declutter: false,
+                source:jsonSource_Panihati_0, 
+                style: style_Panihati_0,
+                popuplayertitle: "Panihati",
+                interactive: true,
+                    title: '<img src="styles/legend/Panihati_0.png" /> Panihati'
+                });
+
+lyr_Panihati_0.setVisible(true);
+var layersList = [lyr_Panihati_0];
+lyr_Panihati_0.set('fieldAliases', {'Id': 'Id', 'Area': 'Area', 'pop_den': 'Population Density', 'sex_ratio': 'Sex Ratio', 'per_Lt_p': 'per_Lt_p', 'per_lit_f_': 'per_lit_f_', 'per_st': 'ST percentage', 'per_sc': 'per_sc', 'per_main_w': 'per_main_w', 'per_margin': 'per_margin', 'State': 'State', 'District': 'District', 'Subdistt': 'Subdistt', 'Town_Villa': 'Town_Villa', 'EB': 'EB', 'Level': 'Level', 'Name': 'Name', 'No_HH': 'No_HH', 'TOT_P': 'TOT_P', 'TOT_M': 'TOT_M', 'TOT_F': 'TOT_F', 'P_SC': 'P_SC', 'M_SC': 'M_SC', 'F_SC': 'F_SC', 'P_ST': 'P_ST', 'M_ST': 'M_ST', 'F_ST': 'F_ST', 'P_LIT': 'P_LIT', 'M_LIT': 'M_LIT', 'F_LIT': 'F_LIT', 'P_ILL': 'P_ILL', 'M_ILL': 'M_ILL', 'F_ILL': 'F_ILL', 'TOT_WORK_P': 'TOT_WORK_P', 'TOT_WORK_M': 'TOT_WORK_M', 'TOT_WORK_F': 'TOT_WORK_F', 'MAINWORK_P': 'MAINWORK_P', 'MAINWORK_M': 'MAINWORK_M', 'MAINWORK_F': 'MAINWORK_F', 'MARGWORK_P': 'MARGWORK_P', 'MARGWORK_M': 'MARGWORK_M', 'MARGWORK_F': 'MARGWORK_F', 'NON_WORK_P': 'NON_WORK_P', 'NON_WORK_M': 'NON_WORK_M', 'NON_WORK_F': 'NON_WORK_F', 'Good_Con_R': 'Good_Con_R', 'Two_DW_Roo': 'Two_DW_Roo', 'OWN_House': 'OWN_House', 'Rentad_Hou': 'Rentad_Hou', 'Radio': 'Radio', 'TV': 'TV', 'Mobile': 'Mobile', 'Safe_Water': 'Safe_Water', 'Electricit': 'Electricit', 'Closed_Dra': 'Closed_Dra', 'Hav_Bathro': 'Hav_Bathro', 'Hav_Kitche': 'Hav_Kitche', 'Hav_Bicycl': 'Hav_Bicycl', 'Hav_scoote': 'Hav_scoote', });
+lyr_Panihati_0.set('fieldImages', {'Id': 'TextEdit', 'Area': 'TextEdit', 'pop_den': 'TextEdit', 'sex_ratio': 'TextEdit', 'per_Lt_p': 'TextEdit', 'per_lit_f_': 'TextEdit', 'per_st': 'TextEdit', 'per_sc': 'TextEdit', 'per_main_w': 'TextEdit', 'per_margin': 'TextEdit', 'State': 'TextEdit', 'District': 'TextEdit', 'Subdistt': 'TextEdit', 'Town_Villa': 'TextEdit', 'EB': 'TextEdit', 'Level': 'TextEdit', 'Name': 'TextEdit', 'No_HH': 'TextEdit', 'TOT_P': 'TextEdit', 'TOT_M': 'TextEdit', 'TOT_F': 'TextEdit', 'P_SC': 'TextEdit', 'M_SC': 'TextEdit', 'F_SC': 'TextEdit', 'P_ST': 'TextEdit', 'M_ST': 'TextEdit', 'F_ST': 'TextEdit', 'P_LIT': 'TextEdit', 'M_LIT': 'TextEdit', 'F_LIT': 'TextEdit', 'P_ILL': 'TextEdit', 'M_ILL': 'TextEdit', 'F_ILL': 'TextEdit', 'TOT_WORK_P': 'TextEdit', 'TOT_WORK_M': 'TextEdit', 'TOT_WORK_F': 'TextEdit', 'MAINWORK_P': 'TextEdit', 'MAINWORK_M': 'TextEdit', 'MAINWORK_F': 'TextEdit', 'MARGWORK_P': 'TextEdit', 'MARGWORK_M': 'TextEdit', 'MARGWORK_F': 'TextEdit', 'NON_WORK_P': 'TextEdit', 'NON_WORK_M': 'TextEdit', 'NON_WORK_F': 'TextEdit', 'Good_Con_R': 'TextEdit', 'Two_DW_Roo': 'TextEdit', 'OWN_House': 'TextEdit', 'Rentad_Hou': 'TextEdit', 'Radio': 'TextEdit', 'TV': 'TextEdit', 'Mobile': 'TextEdit', 'Safe_Water': 'TextEdit', 'Electricit': 'TextEdit', 'Closed_Dra': 'TextEdit', 'Hav_Bathro': 'TextEdit', 'Hav_Kitche': 'TextEdit', 'Hav_Bicycl': 'TextEdit', 'Hav_scoote': 'TextEdit', });
+lyr_Panihati_0.set('fieldLabels', {'Id': 'hidden field', 'Area': 'inline label - visible with data', 'pop_den': 'inline label - visible with data', 'sex_ratio': 'hidden field', 'per_Lt_p': 'hidden field', 'per_lit_f_': 'hidden field', 'per_st': 'inline label - visible with data', 'per_sc': 'hidden field', 'per_main_w': 'hidden field', 'per_margin': 'hidden field', 'State': 'hidden field', 'District': 'hidden field', 'Subdistt': 'hidden field', 'Town_Villa': 'hidden field', 'EB': 'hidden field', 'Level': 'hidden field', 'Name': 'hidden field', 'No_HH': 'hidden field', 'TOT_P': 'hidden field', 'TOT_M': 'hidden field', 'TOT_F': 'hidden field', 'P_SC': 'hidden field', 'M_SC': 'hidden field', 'F_SC': 'hidden field', 'P_ST': 'hidden field', 'M_ST': 'hidden field', 'F_ST': 'hidden field', 'P_LIT': 'hidden field', 'M_LIT': 'hidden field', 'F_LIT': 'hidden field', 'P_ILL': 'hidden field', 'M_ILL': 'hidden field', 'F_ILL': 'hidden field', 'TOT_WORK_P': 'hidden field', 'TOT_WORK_M': 'hidden field', 'TOT_WORK_F': 'hidden field', 'MAINWORK_P': 'hidden field', 'MAINWORK_M': 'hidden field', 'MAINWORK_F': 'hidden field', 'MARGWORK_P': 'hidden field', 'MARGWORK_M': 'hidden field', 'MARGWORK_F': 'hidden field', 'NON_WORK_P': 'hidden field', 'NON_WORK_M': 'hidden field', 'NON_WORK_F': 'hidden field', 'Good_Con_R': 'hidden field', 'Two_DW_Roo': 'hidden field', 'OWN_House': 'hidden field', 'Rentad_Hou': 'hidden field', 'Radio': 'hidden field', 'TV': 'hidden field', 'Mobile': 'hidden field', 'Safe_Water': 'hidden field', 'Electricit': 'hidden field', 'Closed_Dra': 'hidden field', 'Hav_Bathro': 'hidden field', 'Hav_Kitche': 'hidden field', 'Hav_Bicycl': 'hidden field', 'Hav_scoote': 'hidden field', });
+lyr_Panihati_0.on('precompose', function(evt) {
+    evt.context.globalCompositeOperation = 'normal';
+});
